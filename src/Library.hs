@@ -1,24 +1,14 @@
 module Library where
-import PdePreludat
+import PdePreludat hiding (($))
 
--- Desafio 1
+-- Desafío, implementar la función aplicación, que recibe una función y un valor y aplica el valor como parámetro a la función.
+-- El desafío es que hay que implementarlo sin escribir parámetros, ni usar lambdas ni definir funciones auxiliares.
+-- Por ej., estas definiciones NO valen:
+-- ($) funcion valor = funcion valor -- porque estan los parametros
+-- ($) = \funcion valor -> funcion valor -- porque esta usando una lambda
+-- aplicar funcion valor = funcion valor -- porque se esta definiendo una funcion auxiliar 
+-- ($) = aplicar
+-- Tampoco vale importarlo (ahora se está no importando al hacer hiding (($)))
 
-zippear = implementame
-
--- Desafio 2
-
-data ArbolBinario = Hoja | Rama ArbolBinario Number ArbolBinario deriving Eq
-
--- Implementado Show para que se pueda mostrar bonito por consola el arbol
-instance Show ArbolBinario where
-  show arbol = init $ unlines (showArbol arbol)
-    where showArbol (Rama ramaIzquierda valor ramaDerecha)
-            = show valor : (showRamas ramaIzquierda ramaDerecha)
-                where
-                    showRamas izquierda derecha =
-                        ((pad "+- " "|  ") (showArbol derecha)) ++ ((pad "`- " "   ") (showArbol izquierda))
-                    pad first rest = zipWith (++) (first : repeat rest)
-          showArbol (Hoja) = []
-
-ordenado :: ArbolBinario -> Bool
-ordenado = implementame
+($) :: (a -> b) -> a -> b
+($) = implementame
