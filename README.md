@@ -1,4 +1,4 @@
-# Desafío del café con leche
+# Desafío del café con leche II, Haskell contraataca
 
 [https://wiki.uqbar.org/wiki/articles/desafios-cafe-con-leche.html]()
 
