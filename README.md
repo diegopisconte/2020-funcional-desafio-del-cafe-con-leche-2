@@ -16,4 +16,5 @@ Sobre este repo no tienen permiso de escritura, lo pueden clonar, pero no pueden
 
 ![](https://i.imgur.com/p2FKUPJ.png)
 
-...
+- Gabor Delli Carri, Christian Nicolas
+- Sanchez, Tomas
