@@ -11,4 +11,4 @@ import PdePreludat hiding (($))
 -- Tampoco vale importarlo (ahora se está no importando al hacer hiding (($)))
 
 ($) :: (a -> b) -> a -> b
-($) = implementame
+($) funcion = funcion 
